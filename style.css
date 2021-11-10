@@ -286,9 +286,9 @@ a {
     background-repeat: no-repeat;
 }
 
-.section-column-widget__caption_fire::before { background-image: url("/img/icons/fire.svg"); }
+.section-column-widget__caption_fire::before { background-image: url("./img/icons/fire.svg"); }
 
-.section-column-widget__caption_sale::before { background: url("/img/icons/sale.png"); }
+.section-column-widget__caption_sale::before { background: url("./img/icons/sale.png"); }
 
 /* Footer
 ============================================================================================== */
