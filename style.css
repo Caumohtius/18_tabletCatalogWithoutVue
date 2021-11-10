@@ -1,0 +1,444 @@
+html {
+    font-size: 15px;
+    line-height: 20px;
+}
+
+/* Fonts
+============================================================================================== */
+
+@font-face {
+    font-family: 'Carlito';
+    src: local('Carlito'), url('./fonts/Carlito.woff2') format('woff2'), url('./fonts/Carlito.woff') format('woff'), url('./fonts/Carlito.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Carlito';
+    src: local('Carlito Italic'), local('Carlito-Italic'), url('./fonts/Carlitoitalic.woff2') format('woff2'), url('./fonts/Carlitoitalic.woff') format('woff'), url('./fonts/Carlitoitalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Carlito';
+    src: local('Carlito Bold'), local('Carlito-Bold'), url('./fonts/Carlitobold.woff2') format('woff2'), url('./fonts/Carlitobold.woff') format('woff'), url('./fonts/Carlitobold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Carlito';
+    src: local('Carlito Bold Italic'), local('Carlito-BoldItalic'), url('./fonts/Carlitobolditalic.woff2') format('woff2'), url('./fonts/Carlitobolditalic.woff') format('woff'), url('./fonts/Carlitobolditalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Global
+============================================================================================== */
+
+body {
+    margin: 0;
+    min-height: 600px;
+
+    font-family: "Carlito", sans-serif;
+    font-size: 1rem;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.placeholder {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    font-size: 1em;
+
+    background-color: #3d3d3d15;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.page__center {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.section {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+/* Header
+============================================================================================== */
+
+.header__inner {
+    display: flex;
+    padding: 24px 0;
+
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.header__logo {
+    width: 250px;
+    height: 40px;
+}
+
+.header__logo-link {
+    font-size: 18px;
+    font-weight: 700;
+    color: #4a4a4a;
+
+    text-decoration: none;
+}
+
+.header-search {
+    position: relative;
+
+    width: 330px;
+    height: 40px;
+}
+
+.header-search__input {
+    display: block;
+    padding: .55em 50px .55em 1em;
+    width: 100%;
+
+    color: #4a4a4a;
+    font-family: "Carlito", sans-serif;
+    font-size: 17px;
+
+    border: none;
+    border-radius: 3px;
+    outline: none;
+
+    box-shadow: 0 0 0 1px #d3d3d3 inset;
+    transition: box-shadow .2s;
+}
+
+.header-search__input:focus {
+    box-shadow: 0 0 0 1px #198bdb inset, 0 0 5px #198bdb;
+}
+
+.header-search__submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 0 10px;
+
+    border: none;
+    outline: none;
+
+    background: none;
+
+    cursor: pointer;
+}
+
+.header-search__submit-icon {
+    transition-duration: .2s;
+}
+
+.header-search__input:focus +
+.header-search__submit >
+.header-search__submit-icon {
+    fill: #1d79bf;
+}
+
+/* Update-unit
+============================================================================================== */
+
+.update-unit {
+    display: flex;
+    margin: 15px 0;
+    padding: 8px 10px 8px 22px;
+
+    color: #222;
+    font-size: 16px;
+
+    border-radius: 3px;
+    border: 1px solid #d4d4d4;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.update-unit__button {
+    display: block;
+    padding: .5em 1.25em;
+
+    color: #fff;
+
+    background: linear-gradient(315deg, #82C943 0%, #65AB3B 100%);
+    border-radius: 3px;
+
+    text-decoration: none;
+}
+
+/* Main home page
+============================================================================================== */
+
+.section__intro {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page__title {
+    display: inline-block;
+
+    font-size: 38px;
+    font-weight: 700;
+    color: #4a4a4a;
+
+    line-height: 1;
+}
+
+.last-update {
+    font-size: 16px;
+    color: #979797;
+}
+
+.section-column {
+    column-count: 3;
+    column-gap: 30px;
+}
+
+.section-column-widget {
+    margin-bottom: 30px;
+    padding: 20px 15px;
+
+    background-color: #f4f4f4;
+    border-radius: 4px;
+
+    break-inside: avoid-column;
+}
+
+.section-column-widget_hot {
+    background-color: #feddde;
+}
+
+.section-column-widget__caption {
+    display: block;
+
+    font-size: 21px;
+    color: #44428c;
+}
+
+.section-column-widget__caption:active {
+    color: #4a4a4a;
+}
+
+.section-column-widget__item {
+    display: block;
+    padding: 5px 0;
+
+    font-size: 17px;
+    color: #8a89a4;
+}
+
+.section-column-widget__item:active {
+    color: #222;
+}
+
+.section-column-widget__caption +
+.section-column-widget__item {
+    margin-top: 14px;
+}
+
+.section-column-widget__caption_fire,
+.section-column-widget__caption_sale {
+    position: relative;
+    padding-left: 34px;
+}
+
+.section-column-widget__caption_fire::before,
+.section-column-widget__caption_sale::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    width: 24px;
+    height: 24px;
+
+    transform: translate(0,-50%);
+
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.section-column-widget__caption_fire::before { background-image: url("/img/icons/fire.svg"); }
+
+.section-column-widget__caption_sale::before { background: url("/img/icons/sale.png"); }
+
+/* Footer
+============================================================================================== */
+
+.footer__inner {
+    display: flex;
+    padding: 15px 0;
+
+    font-size: 13px;
+    color: #979797;
+
+    border-top: 1px solid #d3d3d3;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__rights::before {
+    content: "";
+
+    display: inline-block;
+    width: 30px;
+    margin-right: 5px;
+}
+
+.footer__last-update {
+    font-size: 13px;
+}
+
+/* Main catalog
+============================================================================================== */
+
+.arrow-btn {
+    display: inline-block;
+    margin-right: 15px;
+
+    vertical-align: sub;
+}
+
+.section__catalog {
+    display: flex;
+}
+
+.section__catalog-sidebar {
+    width: 25%;
+}
+
+.section__catalog-article {
+    width: 75%;
+}
+
+.section__catalog-accordion {
+    position: relative;
+
+    padding: 12px 9px 12px 30px;
+
+    background-color: #f4f4f4;
+    border-radius: 4px;
+}
+
+.section__catalog-accordion +
+.section__catalog-accordion {
+    margin-top: 20px;
+}
+
+.accordion__link {
+    font-size: 18px;
+    color: #44428C;
+}
+
+.accordion__link:active {
+    color: #222;
+}
+
+.accordion__btn {
+    position: absolute;
+    left: -1px;
+    top: 12px;
+
+    width: 22px;
+    height: 22px;
+
+    cursor: pointer;
+}
+
+.accordion__btn::before {
+    content: url("./img/icons/plus.svg");
+    display: block;
+
+    height: 22px;
+}
+
+.accordion__content {
+    margin-top: 18px;
+}
+
+.accordion__item +
+.accordion__item {
+    margin-top: 16px;
+}
+
+.accordion__item-link,
+.accordion__subitem-link {
+    display: block;
+
+    font-size: 13px;
+    color: #8A89A4;
+}
+
+.accordion__item-link:active,
+.accordion__subitem-link:active {
+    color: #222;
+}
+
+.accordion__subcategory {
+    position: relative;
+}
+
+.accordion__subcategory-btn {
+    position: absolute;
+    left: -18px;
+    top: 2px;
+
+    width: 13px;
+    height: 13px;
+}
+
+.accordion__subcategory-btn::before {
+    content: url("./img/icons/minus-oval.svg");
+}
+
+.accordion__item-content {
+    margin-top: 12px;
+}
+
+.accordion__subitem-link {
+    position: relative;
+
+    padding-left: 18px;
+}
+
+.accordion__subitem-link +
+.accordion__subitem-link {
+    margin-top: 8px;
+}
+
+.accordion__subitem-link::before {
+    content: url("./img/icons/sub-arrow.svg");
+
+    position: absolute;
+    left: 0;
+    top: 0;
+}
