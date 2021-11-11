@@ -18,9 +18,7 @@
             <div class="header__inner">
 
                 <div class="header__logo">
-                    <a href="/" class="header__logo-link">
-                        <div class="placeholder">Logo</div>
-                    </a>
+                        <div class="placeholder header__logo-link">Logo</div>
                 </div>
 
                 <form action="" class="header-search">
@@ -28,10 +26,16 @@
                     <input class="header-search__input" type="text" placeholder="Поиск по товарам">
 
                     <button class="header-search__submit" type="submit">
-                        <svg class="header-search__submit-icon" width="20" height="20" viewBox="0 0 20 20" fill="#B7B7B7" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="header-search__submit-icon" viewBox="0 0 20 20" fill="#B7B7B7" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M12.1802 14.4007C10.9391 15.2227 9.45078 15.7014 7.85068 15.7014C3.51487 15.7014 0 12.1865 0 7.85069C0 3.51487 3.51487 0 7.85068 0C12.1865 0 15.7014 3.51487 15.7014 7.85069C15.7014 9.45078 15.2227 10.9391 14.4007 12.1802L19.5401 17.3196C20.1533 17.9328 20.1533 18.9269 19.5401 19.5401C18.9269 20.1533 17.9328 20.1533 17.3196 19.5401L12.1802 14.4007ZM10.6578 12.8783C9.82735 13.343 8.86995 13.6079 7.85068 13.6079C4.67109 13.6079 2.09352 11.0303 2.09352 7.85069C2.09352 4.67109 4.67109 2.09352 7.85068 2.09352C11.0303 2.09352 13.6078 4.67109 13.6078 7.85069C13.6078 8.86995 13.343 9.82734 12.8783 10.6578C12.8758 10.6622 12.8734 10.6666 12.8709 10.671C12.3508 11.5948 11.5831 12.3606 10.6578 12.8783Z"/>
                         </svg>
                     </button>
+
+                    <div class="header-search__results hidden">
+                        <div class="header-search__result">Какой-то резултат поиска</div>
+                        <div class="header-search__result">Какой-то резултат поиска</div>
+                        <div class="header-search__result">Какой-то резултат поиска</div>
+                    </div>
 
                 </form>
 
@@ -61,10 +65,8 @@
 
         <div class="page__center">
 
-            <div class="section section__catalog-intro">
-                <a href="/" class="arrow-btn">
-                    <img src="img/icons/arrow.svg" alt="" class="arrow-btn__img">
-                </a>
+            <div class="section section__intro section__intro_child">
+                <a href="/" class="arrow-btn"></a>
                 <h1 class="page__title">Каталог товаров</h1>
             </div>
 
@@ -75,13 +77,13 @@
 
             <div class="section section__catalog">
 
-                <div class="section__catalog-sidebar">
+                <div class="section-catalog__sidebar">
 
                     <div class="section__catalog-accordion accordion">
 
                         <a href="" class="accordion__link">Офтальмохирургия</a>
 
-                        <div class="accordion__btn"></div>
+                        <div class="accordion__btn accordion__btn_active"></div>
 
                         <div class="accordion accordion__content">
 
@@ -105,11 +107,11 @@
                                 <a href="" class="accordion__item-link">Офтальмологические операционные микроскопы</a>
                             </div>
 
-                            <div class="accordion__item accordion__subcategory">
+                            <div class="accordion__item accordion__item_subcategory">
 
                                 <a href="" class="accordion__item-link">Офтальмологические лазеры</a>
 
-                                <div class="accordion__subcategory-btn"></div>
+                                <div class="accordion__item-btn accordion__item-btn_active"></div>
 
                                 <div class="accordion__item-content">
 
@@ -167,9 +169,323 @@
 
                 </div>
 
-                <div class="section__catalog-article">
+                <div class="section-catalog__article">
 
+                    <div class="section-catalog__row">
 
+                        <div class="section-catalog__cell">
+
+                            <div class="product-card">
+
+                                <div class="product-card__tags">
+
+                                    <span class="product-card__tags-item product-card__tags-item_new">Новинка</span>
+
+                                    <span class="product-card__tags-item product-card__tags-item_hit">Хит</span>
+
+                                </div>
+
+                                <a href="" class="placeholder product-card__img"></a>
+                                <a href="" class="product-card__caption">Ультразвуковой офтальмологический B-скан UD-800</a>
+
+                                <div class="product-card__price">
+                                    <div class="product-card__price-caption">Цена</div>
+                                    <div class="product-card__price-value">По запросу</div>
+                                </div>
+
+                                <a href="" class="placeholder product-card__brand"></a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="section-catalog__cell">
+
+                            <div class="product-card">
+
+                                <div class="product-card__tags">
+
+                                    <span class="product-card__tags-item product-card__tags-item_new">Новинка</span>
+
+                                    <span class="product-card__tags-item product-card__tags-item_hit">Хит</span>
+
+                                </div>
+
+                                <a href="" class="placeholder product-card__img"></a>
+                                <a href="" class="product-card__caption">Ультразвуковой офтальмологический B-скан UD-800</a>
+
+                                <div class="product-card__price">
+                                    <div class="product-card__price-caption">Цена</div>
+                                    <div class="product-card__price-value">По запросу</div>
+                                </div>
+
+                                <a href="" class="placeholder product-card__brand"></a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="section-catalog__cell">
+
+                            <div class="product-card">
+
+                                <div class="product-card__tags">
+
+                                    <span class="product-card__tags-item product-card__tags-item_new">Новинка</span>
+
+                                    <span class="product-card__tags-item product-card__tags-item_hit">Хит</span>
+
+                                </div>
+
+                                <a href="" class="placeholder product-card__img"></a>
+                                <a href="" class="product-card__caption">Ультразвуковой офтальмологический B-скан UD-800</a>
+
+                                <div class="product-card__price">
+                                    <div class="product-card__price-caption">Цена</div>
+                                    <div class="product-card__price-value">По запросу</div>
+                                </div>
+
+                                <a href="" class="placeholder product-card__brand"></a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="section-catalog__cell">
+
+                            <div class="product-card">
+
+                                <div class="product-card__tags">
+
+                                    <span class="product-card__tags-item product-card__tags-item_new">Новинка</span>
+
+                                    <span class="product-card__tags-item product-card__tags-item_hit">Хит</span>
+
+                                </div>
+
+                                <a href="" class="placeholder product-card__img"></a>
+                                <a href="" class="product-card__caption">Ультразвуковой офтальмологический B-скан UD-800</a>
+
+                                <div class="product-card__price">
+                                    <div class="product-card__price-caption">Цена</div>
+                                    <div class="product-card__price-value">По запросу</div>
+                                </div>
+
+                                <a href="" class="placeholder product-card__brand"></a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="section-catalog__cell">
+
+                            <div class="product-card">
+
+                                <div class="product-card__tags">
+
+                                    <span class="product-card__tags-item product-card__tags-item_new">Новинка</span>
+
+                                    <span class="product-card__tags-item product-card__tags-item_hit">Хит</span>
+
+                                </div>
+
+                                <a href="" class="placeholder product-card__img"></a>
+                                <a href="" class="product-card__caption">Ультразвуковой офтальмологический B-скан UD-800</a>
+
+                                <div class="product-card__price">
+                                    <div class="product-card__price-caption">Цена</div>
+                                    <div class="product-card__price-value">По запросу</div>
+                                </div>
+
+                                <a href="" class="placeholder product-card__brand"></a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="section-catalog__cell">
+
+                            <div class="product-card">
+
+                                <div class="product-card__tags">
+
+                                    <span class="product-card__tags-item product-card__tags-item_new">Новинка</span>
+
+                                    <span class="product-card__tags-item product-card__tags-item_hit">Хит</span>
+
+                                </div>
+
+                                <a href="" class="placeholder product-card__img"></a>
+                                <a href="" class="product-card__caption">Ультразвуковой офтальмологический B-скан UD-800</a>
+
+                                <div class="product-card__price">
+                                    <div class="product-card__price-caption">Цена</div>
+                                    <div class="product-card__price-value">По запросу</div>
+                                </div>
+
+                                <a href="" class="placeholder product-card__brand"></a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="section-catalog__cell">
+
+                            <div class="product-card">
+
+                                <div class="product-card__tags">
+
+                                    <span class="product-card__tags-item product-card__tags-item_new">Новинка</span>
+
+                                    <span class="product-card__tags-item product-card__tags-item_hit">Хит</span>
+
+                                </div>
+
+                                <a href="" class="placeholder product-card__img"></a>
+                                <a href="" class="product-card__caption">Ультразвуковой офтальмологический B-скан UD-800</a>
+
+                                <div class="product-card__price">
+                                    <div class="product-card__price-caption">Цена</div>
+                                    <div class="product-card__price-value">По запросу</div>
+                                </div>
+
+                                <a href="" class="placeholder product-card__brand"></a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="section-catalog__cell">
+
+                            <div class="product-card">
+
+                                <div class="product-card__tags">
+
+                                    <span class="product-card__tags-item product-card__tags-item_new">Новинка</span>
+
+                                    <span class="product-card__tags-item product-card__tags-item_hit">Хит</span>
+
+                                </div>
+
+                                <a href="" class="placeholder product-card__img"></a>
+                                <a href="" class="product-card__caption">Ультразвуковой офтальмологический B-скан UD-800</a>
+
+                                <div class="product-card__price">
+                                    <div class="product-card__price-caption">Цена</div>
+                                    <div class="product-card__price-value">По запросу</div>
+                                </div>
+
+                                <a href="" class="placeholder product-card__brand"></a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="section-catalog__cell">
+
+                            <div class="product-card">
+
+                                <div class="product-card__tags">
+
+                                    <span class="product-card__tags-item product-card__tags-item_new">Новинка</span>
+
+                                    <span class="product-card__tags-item product-card__tags-item_hit">Хит</span>
+
+                                </div>
+
+                                <a href="" class="placeholder product-card__img"></a>
+                                <a href="" class="product-card__caption">Ультразвуковой офтальмологический B-скан UD-800</a>
+
+                                <div class="product-card__price">
+                                    <div class="product-card__price-caption">Цена</div>
+                                    <div class="product-card__price-value">По запросу</div>
+                                </div>
+
+                                <a href="" class="placeholder product-card__brand"></a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="section-catalog__cell">
+
+                            <div class="product-card">
+
+                                <div class="product-card__tags">
+
+                                    <span class="product-card__tags-item product-card__tags-item_new">Новинка</span>
+
+                                    <span class="product-card__tags-item product-card__tags-item_hit">Хит</span>
+
+                                </div>
+
+                                <a href="" class="placeholder product-card__img"></a>
+                                <a href="" class="product-card__caption">Ультразвуковой офтальмологический B-скан UD-800</a>
+
+                                <div class="product-card__price">
+                                    <div class="product-card__price-caption">Цена</div>
+                                    <div class="product-card__price-value">По запросу</div>
+                                </div>
+
+                                <a href="" class="placeholder product-card__brand"></a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="section-catalog__cell">
+
+                            <div class="product-card">
+
+                                <div class="product-card__tags">
+
+                                    <span class="product-card__tags-item product-card__tags-item_new">Новинка</span>
+
+                                    <span class="product-card__tags-item product-card__tags-item_hit">Хит</span>
+
+                                </div>
+
+                                <a href="" class="placeholder product-card__img"></a>
+                                <a href="" class="product-card__caption">Ультразвуковой офтальмологический B-скан UD-800</a>
+
+                                <div class="product-card__price">
+                                    <div class="product-card__price-caption">Цена</div>
+                                    <div class="product-card__price-value">По запросу</div>
+                                </div>
+
+                                <a href="" class="placeholder product-card__brand"></a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="section-catalog__cell">
+
+                            <div class="product-card">
+
+                                <div class="product-card__tags">
+
+                                    <span class="product-card__tags-item product-card__tags-item_new">Новинка</span>
+
+                                    <span class="product-card__tags-item product-card__tags-item_hit">Хит</span>
+
+                                </div>
+
+                                <a href="" class="placeholder product-card__img"></a>
+                                <a href="" class="product-card__caption">Ультразвуковой офтальмологический B-скан UD-800</a>
+
+                                <div class="product-card__price">
+                                    <div class="product-card__price-caption">Цена</div>
+                                    <div class="product-card__price-value">По запросу</div>
+                                </div>
+
+                                <a href="" class="placeholder product-card__brand"></a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
