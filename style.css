@@ -7,26 +7,26 @@ html {
 ============================================================================================== */
 
 @font-face {
-    font-family: 'Carlito';
-    src: local('Carlito'), url('./fonts/Carlito.woff2') format('woff2'), url('./fonts/Carlito.woff') format('woff'), url('./fonts/Carlito.ttf') format('truetype');
+    font-family: 'Calibri';
+    src: local('Calibri'), url('./fonts/Calibri.woff2') format('woff2'), url('./fonts/Calibri.woff') format('woff'), url('./fonts/Calibri.ttf') format('truetype'), url('./fonts/Calibri.eot') format('embedded-opentype');
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Carlito';
-    src: local('Carlito Italic'), local('Carlito-Italic'), url('./fonts/Carlitoitalic.woff2') format('woff2'), url('./fonts/Carlitoitalic.woff') format('woff'), url('./fonts/Carlitoitalic.ttf') format('truetype');
+    font-family: 'Calibri';
+    src: local('Calibri Italic'), local('Calibri-Italic'), url('./fonts/Calibri-Italic.woff2') format('woff2'), url('./fonts/Calibri-Italic.woff') format('woff'), url('./fonts/Calibri-Italic.ttf') format('truetype'), url('./fonts/Calibri-Italic.eot') format('embedded-opentype');
     font-weight: 400;
     font-style: italic;
 }
 @font-face {
-    font-family: 'Carlito';
-    src: local('Carlito Bold'), local('Carlito-Bold'), url('./fonts/Carlitobold.woff2') format('woff2'), url('./fonts/Carlitobold.woff') format('woff'), url('./fonts/Carlitobold.ttf') format('truetype');
+    font-family: 'Calibri';
+    src: local('Calibri Bold'), local('Calibri-Bold'), url('./fonts/Calibri-Bold.woff2') format('woff2'), url('./fonts/Calibri-Bold.woff') format('woff'), url('./fonts/Calibri-Bold.ttf') format('truetype'), url('./fonts/Calibri-Bold.eot') format('embedded-opentype');
     font-weight: 700;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Carlito';
-    src: local('Carlito Bold Italic'), local('Carlito-BoldItalic'), url('./fonts/Carlitobolditalic.woff2') format('woff2'), url('./fonts/Carlitobolditalic.woff') format('woff'), url('./fonts/Carlitobolditalic.ttf') format('truetype');
+    font-family: 'Calibri';
+    src: local('Calibri Bold Italic'), local('Calibri-Bolditalic'), url('./fonts/Calibri-Bolditalic.woff2') format('woff2'), url('./fonts/Calibri-Bolditalic.woff') format('woff'), url('./fonts/Calibri-Bolditalic.ttf') format('truetype'), url('./fonts/Calibri-Bolditalic.eot') format('embedded-opentype');
     font-weight: 700;
     font-style: italic;
 }
@@ -38,7 +38,7 @@ body {
     margin: 0;
     min-height: 600px;
 
-    font-family: "Carlito", sans-serif;
+    font-family: Calibri , Helvetica, Arial;
     font-size: 1rem;
 }
 
@@ -122,7 +122,7 @@ a {
     width: 100%;
 
     color: #4a4a4a;
-    font-family: "Carlito", sans-serif;
+    font-family: "Calibri", sans-serif;
     font-size: 17px;
 
     border: none;
@@ -622,4 +622,89 @@ a {
     margin-top: 20px;
     width: 140px;
     height: 40px;
+}
+
+.pagination {
+    margin: 18px 0;
+
+    text-align: center;
+}
+
+.pagination__more,
+.pagination__pages {
+    margin: 1em 0;
+}
+
+.pagination__more-btn {
+    display: inline-block;
+    padding: .6em 1.4em;
+
+    color: #44428c;
+    box-shadow: 0 0 0 1px #d3d3d3 inset;
+    border-radius: 4px;
+}
+
+.pagination__more-btn > span {
+    color: #9e9e9e;
+}
+
+.pagination__more-btn:hover {
+    color: #383774;
+    background-color: #fafafa;;
+}
+
+.pagination__pages {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination__page {
+    padding: 0 .7em;
+
+    font-size: 16px;
+}
+
+.pagination__page-link {
+    color: #44428c;
+}
+
+.pagination__page_current {
+    color: #000;
+    cursor: default;
+}
+
+.pagination__page-link:hover {
+    color: #8a89a4;
+}
+
+.pagination__page-nav {
+    display: block;
+    padding: .7em .7em;
+}
+
+.pagination__page-nav::before {
+    content: "";
+
+    display: block;
+    width: .5em;
+    height: .5em;
+
+    border-top: 2px solid #44428c;
+    border-right: 2px solid #44428c;
+}
+
+
+.pagination__page-nav:hover::before {
+    border-top: 2px solid #8a89a4;
+    border-right: 2px solid #8a89a4;
+}
+
+.pagination__page-nav_right::before {
+    transform: rotate(45deg);
+}
+
+.pagination__page-nav_left::before {
+    transform: rotate(-135deg);
 }
